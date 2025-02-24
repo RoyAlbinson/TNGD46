@@ -4,6 +4,8 @@
       <title>Schema och Program</title>
     </head>
     <body>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Menu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         
       <header>
         <div class="menu">
@@ -13,19 +15,29 @@
             <a href="recension_sida.html">Recension</a>
             <a href="omoss_sida.html">Om Oss</a>
             <a href="biljetter.sida">Biljetter</a>
-            </nav>
+          </nav>
         </div>
       </header>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Image w text~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~Buttons that take u to other parts of the page~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Schedule~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         
-      <!--jag tror det är lättast att jobba med dessa nedan i flex-box och grid snarare än ett table
-      schedulehead ska vara som i 
-      den som heter class=flex-column är en kolumn som ska vara till vänster i tabellen. (använd flex-direction: column; i css)-->
+    <!--jag tror det är lättast att jobba med dessa nedan i flex-box eller grid snarare än ett table
+      "schedulehead" ska vara ovanför resten av schemat(som i min skiss, finns bifogad i "all the links"/"skisser till hemsidan")
+      den som heter class=flex-column är en kolumn som ska vara längst till vänster i tabellen. 
+      (använd flex-direction: column; i css för att göra den lodrät)
+      kommer att bifoga mer detaljerad skiss på hur blocken i schemat borde ligga i samma dokument som de andra skisserna
+      om man kollar i den så är kolumnen med tiderna "flex-column", kolumnen i mitten är "aktiviteter_c1" och den sista är "aktiviteter_c2"-->
         
       <div class="schedulehead">
         <h2>Schema för eventet</h2>
       </div>
         
       <div class="flex-column">
+        <div>11-12:00</div>
         <div>12-13:00</div>
         <div>13-14:00</div>
         <div>14-15:00</div>
@@ -36,7 +48,87 @@
         <div>19-20:00</div>
         <div>20-21:00</div>  
         <div>21-22:00</div>
+        <div>22-23:00</div>
       </div>
+
+      <div class="aktiviteter_c1"> <!--c1 står för column one-->
+        <div id="Rödamattan">Röda mattan</div>
+        <div class="filmvisning">Premiär</div>
+        <div class="Mingel">Mingel</div>
+        <div class="filmvisning">Filmvisning 1</div>
+        <div class="Mingel">Mingel</div>
+        <div class="filmvisning">Filmvisning 2</div>
+        <div class="Mingel">Mingel</div>
+        <div class="filmvisning">Filmvisning 3</div>
+      </div>
+
+      <div class="aktiviteter_c2"> <!--c2 står för column two-->
+        <div class="panel">Panel 1</div>
+        <div class="panel">Panel 2</div>  
+        <div class="panel">Panel 3</div>
+      </div>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Program~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+      <div class="Program">
+        <h2>Programförklaring</h2>
+
+        <ul>
+          <li>
+            <h3>Röda Mattan:</h3>
+            <h4>11:00-11:45</h4> <!--tänker att denna headern är i ganska liten text i jämförelse med h3 och p. och h3 e lite större än p men såklart beroende på vad som ser bra ut i webbläsaren-->
+            <p>Alla skådespelare i filmen kommer synas på Röda Mattan! Hur exalternade är inte det?!</p>
+          </li>
+          <li>
+            <h3>Premiär:</h3>
+            <h4>12:00-14:00</h4>
+            <p>Den första filmvisningen för dagen och för allmänheten av Drottning Omma. 
+                Filmen visas även tre gånger till under dagen. 
+                Du har möjlighet att välja vilken tid du vill se filmen när du köper biljett. 
+                Resten av eventet är tillgänglig oavsett vilken biljett du köper. 
+            </p> 
+          </li>
+          <!--kanske en <span> med italic på de gånger osm "drottning omma" dyker upp som filmtitel??? bara ett förslag :)-->
+          <li>
+            <h3>Filmvisningar:</h3>
+            <h4>15:00-17:00, 18:00-20:00 och 21:00-23:00</h4>
+            <p>Filmen Drottning Omma visas, förutom premiären, ytterligare tre gånger under dagen. 
+                När du köper biljett har du möjlighet att välja vilken filmvisning du vill gå på. 
+                Resten av eventet är tillgängligt oavsett vilken biljett du köper. </p>
+          </li>
+          <li>
+            <h3>Mingel:</h3>
+            <h4>14:30-15:00, 17:30-18:00 och 20:30-21:00</h4>
+            <p>Här finns det tid för dig att mingla med andra gäster på eventet. 
+                Det bjuds även på bubbel eller annat alkoholfritt alternativ för dem som vill ha!</p>
+          </li>
+          <li>
+            <h3>Panel 1:</h3>
+            <h4>13:00-15:00</h4>
+            <p>Denna panel är till för att eventets reportrar ska kunna ställa spännande frågor till skådespelarna. 
+                Det finns även en panel med skådespelarna klockan 19:00 ifall du inte hinner gå på den första!
+                Hör vad de har att säga live! 
+                Efteråt finns det även tid för att ta bilder och få autografer från skådespelarna!
+            </p>
+          </li>
+          <li>
+            <h3>Panel 2:</h3>
+            <h4>16:00-18:00</h4>
+            <p>Denna panel är till för att eventets reportrar ska kunna ställa frågor till regissören, manusförfattaren och alla genier bakom filmen. 
+                Är du intresserad av hur det går till att skapa film? Då är denna intressanta panel till för dig. 
+                Efteråt finns det även tid för att ta bilder och få autografer!
+            </p>
+          </li>
+          <li>
+            <h3>Panel 3:</h3>
+            <h4>19:00-21:00</h4>
+            <p>Denna panel är, precis som den första, till för att eventets reportrar ska kunna ställa spännande frågor till skådespelarna. 
+                Efteråt finns det även tid för att ta bilder och få autografer från dem!
+            </p>
+          </li>
+        </ul>
+      </div>
+
         
     </body>
   </html>
