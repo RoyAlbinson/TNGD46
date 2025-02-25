@@ -1,30 +1,113 @@
 <!--Sofia Kholkina, sofkh228-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="utf-8">
-    <title>TNGD46-2025VT: Web Mini Project</title>
-    <meta name="author" content="Sofia Kholkina">
-    <meta name="description" content="A web project consisting of multiple interlinked webpages, designed as a website for a movie event..">
+    <title>TNGD46-2025VT: Grupprojekt</title>
+    <meta name="author" content="Grupp 9">
+    <meta name="description" content="A web project consisting of multiple interlinked webpages, designed as a website for a movie event.">
     <meta name="keywords" content="mystical horror, local legends, ghost stories, eerie tales, supernatural, haunted myths, dark folklore, cursed places, shadowy secrets, paranormal events">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
     <script src="javascript.js"></script>
   </head>
 
   <body>
 
     <header>
-      <div class="menu">
-        <nav>
-          <a href="hem_sida.html">Hem</a>
-          <a href="program_sida.html">Program</a>
-          <a href="recension_sida.html">Recension</a>
-          <a href="omoss_sida.html">Om Oss</a>
-          <a href="biljetter_sida.html">Biljetter</a>
+        <nav id="navbar">
+          <i class="fa-solid fa-caret-down"></i>
+          <a href="hem_sida.html" class="menu-items">Hem</a>
+          <a href="program_sida.html" class="menu-items">Program</a>
+          <a href="recension_sida.html" class="menu-items">Recension</a>
+          <a href="omoss_sida.html" class="menu-items">Om Oss</a>
+          <a href="biljetter_sida.html" class="menu-items">Biljetter</a>
         </nav>
-      </div>
     </header>
-    <h1><span id="changing">legends</span> come alive<h1>
+
+    <section class="container">
+      <img src="media/omberg_berg2.jpg" id="omberg">
+      <div class="centered">
+      <h1 id="text"><span id="changing">legends</span> <br>come alive</h1>
+      </div>
+    </section>
+
+    <section class="sec1">
+      <h1>Drottning Omma</h1>
+      <p>In CSS animations, the @keyframes rule defines how the animation looks, or, more specifically, which element styles change and when. Without this rule, your element won't have any animation to use. Check that your @keyframes rule exists and that its name matches that of animation-name for the targeted element
+      <br><br>
+      </p>
+      <div class="countdown">
+        <h1 id="countdown_headline">Event starts in</h1>
+        <div id="countdown">
+            <li><span id="days"></span>dagar</li>
+            <li><span id="hours"></span>timmar</li>
+            <li><span id="minutes"></span>minuter</li>
+            <li><span id="seconds"></span>sekunder</li>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec2">
+      <div class="textbox">
+        <p>In CSS animations, the @keyframes rule defines how the animation looks, or, more specifically, which element styles change and when. Without this rule, your element won't have any animation to use. Check that your @keyframes rule exists and that its name matches that of animation-name for the targeted element
+          <br><br>
+          In CSS animations, the @keyframes rule defines how the animation looks, or, more specifically, which element styles change and when. Without this rule, your element won't have any animation to use. Check that your @keyframes rule exists and that its name matches that of animation-name for the targeted element
+          <br><br>
+          In CSS animations, the @keyframes rule defines how the animation looks, or, more specifically, which element styles change and when. Without this rule, your element won't have any animation to use. Check that your @keyframes rule exists and that its name matches that of animation-name for the targeted element
+          <br><br><br><br>
+          In CSS animations, the @keyframes rule defines how the animation looks, or, more specifically, which element styles change and when. Without this rule, your element won't have any animation to use. Check that your @keyframes rule exists and that its name matches that of animation-name for the targeted element
+          <br><br>
+          In CSS animations, the @keyframes rule defines how the animation looks, or, more specifically, which element styles change and when. Without this rule, your element won't have any animation to use. Check that your @keyframes rule exists and that its name matches that of animation-name for the targeted element
+          <br><br></p>
+      </div>
+      <div id="button_grid">
+      <a href="program_sida.html" class="button">Learn more</a>
+      <a href="biljetter_sida.html" class="button">Buy tickets</a>
+      </div>
+    </section>
+
+    <section class="sec3">
+      <div class=gallery-wrap>
+        <div id="backBtn">&#8592;</div>
+
+        <div class="gallery">
+         
+          <div>
+            <img src="media/2.jpg" alt="">
+          </div>
+          <div>
+            <img src="media/3.jpg" alt="">
+          </div>
+          <div>
+            <img src="media/4.jpg" alt="">
+          </div>
+          <div>
+            <img src="media/5.jpg" alt="">
+          </div>
+          <div>
+            <img src="media/7.jpg" alt="">
+          </div>
+          <div>
+            <img src="media/8.jpg" alt="">
+          </div>
+        </div>
+        <div id="nextBtn">&#8594;</div>
+      </div>
+    </section>
+
+    
+    <!-- <div class="container">
+      <img src="media/omberg_berg2.jpg" alt="waste_pile">
+        <div class="centered">
+          <h1><span id="changing">legends</span> come alive</h1>
+        </div>
+    </div>
+  
+    <section class="mist_content">
+      <h1 class="autoshow">Drottning Omma</h1>
+      <p>This is the next segment, revealed as the mist rises.</p>
+    </section> -->
 
     <footer>
       <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
