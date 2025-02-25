@@ -1,9 +1,17 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <meta charset="utf-8">
       <title>Schema och Program</title>
+      <meta name="author" content="Roy Albinson">
+      <meta name="description" content="A web project consisting of multiple interlinked webpages, designed as a website for a movie event..">
+      <meta name="keywords" content="mystical horror, local legends, ghost stories, eerie tales, supernatural, haunted myths, dark folklore, cursed places, shadowy secrets, paranormal events">
+      <link rel="stylesheet" href="styles.css">
+      <script src="javascript.js"></script>
     </head>
     <body>
+
+    <!--feel free to change names of classes and id and shit if its hard to understand my thought process w them sorry if confusing heh-->
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Menu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         
@@ -19,70 +27,135 @@
         </div>
       </header>
 
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Image w text~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Image w text~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    I think if you use this CSS down below the text will appear centered in front of the image:
+
+    .imagewtxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  -->
+
+      <div class="imagewtxt">
+        <img src="vet inte hur jag ska lägga in bilden så att alla har tillgång till den" alt="Drottning Omma i en skog">
+        <div>
+          <h1>Schema och Program</h1>
+        </div>
+      </div>
 
     <!--~~~~~~~~~~~~~~~Buttons that take u to other parts of the page~~~~~~~~~~~~~~~~~~-->
+
+      <div class="page_navigation">
+        <div>
+          <button>
+            <a href="#pagedown1">Eventschema</a>
+          </button>
+        </div>
+        <div>
+          <button>
+            <a href="#pagedown2">Programförklaring</a>
+          </button>
+        </div>
+      </div>
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Schedule~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         
     <!--jag tror det är lättast att jobba med dessa nedan i flex-box eller grid snarare än ett table
       "schedulehead" ska vara ovanför resten av schemat(som i min skiss, finns bifogad i "all the links"/"skisser till hemsidan")
-      den som heter class=flex-column är en kolumn som ska vara längst till vänster i tabellen. 
+      den som heter class="flex-column" är en kolumn som ska vara längst till vänster i tabellen. 
       (använd flex-direction: column; i css för att göra den lodrät)
       kommer att bifoga mer detaljerad skiss på hur blocken i schemat borde ligga i samma dokument som de andra skisserna
-      om man kollar i den så är kolumnen med tiderna "flex-column", kolumnen i mitten är "aktiviteter_c1" och den sista är "aktiviteter_c2"-->
-        
-      <div class="schedulehead">
-        <h2>Schema för eventet</h2>
-      </div>
-        
-      <div class="flex-column">
-        <div>11-12:00</div>
-        <div>12-13:00</div>
-        <div>13-14:00</div>
-        <div>14-15:00</div>
-        <div>15-16:00</div>
-        <div>16-17:00</div>
-        <div>17-18:00</div>  
-        <div>18-19:00</div>
-        <div>19-20:00</div>
-        <div>20-21:00</div>  
-        <div>21-22:00</div>
-        <div>22-23:00</div>
-      </div>
+      om man kollar i den så är kolumnen med tiderna "flex-column", kolumnen i mitten är "aktiviteter_c1" och den högra är "aktiviteter_c2"
+      jag tror det går att göra alla dessa till en grid. så liksom de individuella elementen i kolumnerna är strukturerade m.h.a.flex-box och 
+      sen har man the parent divs i en grid så man kan lägga allt bredvid varandra
+      jag har också gjort en mega div av allt i schedule och de grafiska elementen 
+      som ska vara runt omkring för då kan man liksom inkludera dem i ett grid så som jag försökte beskriva ovan
+      eller om du får de o funka på nåt annat sätt som du föredrar :)-->
+       
+      <div class="megadiv">
 
-      <div class="aktiviteter_c1"> <!--c1 står för column one-->
-        <div id="Rödamattan">Röda mattan</div>
-        <div class="filmvisning">Premiär</div>
-        <div class="Mingel">Mingel</div>
-        <div class="filmvisning">Filmvisning 1</div>
-        <div class="Mingel">Mingel</div>
-        <div class="filmvisning">Filmvisning 2</div>
-        <div class="Mingel">Mingel</div>
-        <div class="filmvisning">Filmvisning 3</div>
-      </div>
+        <div class="schedulehead">
+          <h2 id="pagedown1">Schema för eventet</h2> <!--varför den heter pagedown1 är för att knapparna tidigare länkar till delen av sidan som är döpt till pagedown1-->
+        </div>
 
-      <div class="aktiviteter_c2"> <!--c2 står för column two-->
-        <div class="panel">Panel 1</div>
-        <div class="panel">Panel 2</div>  
-        <div class="panel">Panel 3</div>
-      </div>
+        <div class="flex-column">
+          <div>11-12:00</div>
+          <div>12-13:00</div>
+          <div>13-14:00</div>
+          <div>14-15:00</div>
+          <div>15-16:00</div>
+          <div>16-17:00</div>
+          <div>17-18:00</div>  
+          <div>18-19:00</div>
+          <div>19-20:00</div>
+          <div>20-21:00</div>  
+          <div>21-22:00</div>
+          <div>22-23:00</div>
+        </div>
+
+        <div class="aktiviteter_c1"> <!--c1 står för column one-->
+          <div id="Rödamattan">Röda mattan</div>
+          <div class="filmvisning">Premiär</div>
+          <div class="Mingel">Mingel</div>
+          <div class="filmvisning">Filmvisning 1</div>
+          <div class="Mingel">Mingel</div>
+          <div class="filmvisning">Filmvisning 2</div>
+          <div class="Mingel">Mingel</div>
+          <div class="filmvisning">Filmvisning 3</div>
+        </div>
+
+        <div class="aktiviteter_c2"> <!--c2 står för column two-->
+          <div class="panel">Panel 1</div>
+          <div class="panel">Panel 2</div>  
+          <div class="panel">Panel 3</div>
+        </div>
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Grafiska element bredvid schedule~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <!--detta kan behöva göras om till en div med allt content inom schedule samt de tillhörande grafiska elementen nedan 
-    för att sedan kunna sätta alla komponenter i ett grid så att de ligger bredvid varandra så som i skissen men jag är osäker-->
 
-    <!--kommentar till mig själv: gör divs här för kolumner med grafiska element, eller kombinera elementen så att allt på en sida är ett sammanhängande element-->
+        <div class="runesL"> <!--L står för left-->
+          <div> 
+            <img src="insert länk till Othila left" alt="Othila Rune">
+          </div>
+          <div> 
+            <img src="insert länk till Mannaz left" alt="Mannaz Rune">
+          </div>
+          <div> 
+            <img src="insert länk till Mannaz left" alt="Mannaz Rune">
+          </div>
+          <div> 
+            <img src="insert länk till Ansuz left" alt="Ansuz Rune">
+          </div>
+        </div>
+
+        <div class="runesR"> <!--R står för Right-->
+          <div> 
+            <img src="insert länk till Othila right" alt="Othila Rune">
+          </div>
+          <div> 
+            <img src="insert länk till Mannaz right" alt="Mannaz Rune">
+          </div>
+          <div> 
+            <img src="insert länk till Mannaz right" alt="Mannaz Rune">
+          </div>
+          <div> 
+            <img src="insert länk till Ansuz right" alt="Ansuz Rune">
+          </div>
+        </div>
+
+      </div> <!--this is class=megadiv som gör att grafiska element och schema delen kan bli sammankopplade i en grid om man vill-->
+
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Program~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
       <div class="Program">
-        <h2>Programförklaring</h2>
+        <h2 id="pagedown2">Programförklaring</h2>
 
         <ul>
           <li>
             <h3>Röda Mattan:</h3>
-              <h4>11:00-11:45</h4> <!--tänker att denna headern är i ganska liten text i jämförelse med h3 och p. och h3 e lite större än p men såklart beroende på vad som ser bra ut i webbläsaren-->
+              <h4>11:00-11:45</h4> <!--tänker att denna headern är i ganska liten text i jämförelse med h3 och p. och h3 e lite större än p men såklart beroende på vad som ser bra ut i webbläsaren sen-->
             <p>Alla skådespelare i filmen kommer synas på Röda Mattan! Hur exalternade är inte det?!</p>
           </li>
           <li>
@@ -133,14 +206,22 @@
             </p>
           </li>
         </ul>
-      </div>
+      </div> <!-- denna div är class=program-->
 
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Grafiska element runt om program~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    kan behöva göras om till en div med allt content inom program samt de tillhörande grafiska elementen nedan 
-    för att sedan kunna sätta alla komponenter i ett grid så att de ligger bredvid varandra som i skissen men jag är osäker-->
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Grafiska element runt om program~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      
+      det blir väldigt många grafiska element att skapa på kort tid om vi ska ha element runt om programmet också. 
+      Det kanske räcker med de som är runt schemat och så skulle man bara kunna göra programförklaringen mer 
+      heltäckande eller bredare över sidan så ser det ändå normalt ut. vi har ganska lite tid för att hinna sitta och 
+      skapa grafiska element och ai ger mig inget bra jsut nu-->
 
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<!--kommentar till mig själv: gör divs här för kolumner med grafiska element, eller kombinera elementen så att allt på en sida är ett sammanhängande element-->
-        
+      <footer>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+      </footer>
+
     </body>
   </html>
