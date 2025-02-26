@@ -17,12 +17,12 @@
 @font-face { font-family: 'v4compatibility'; src: url('fonts/fontawesome/webfonts/fa-v4compatibility.woff2'); }
 
 body {
-  background-color: #172518;
+  background-color: #222222;
 }
 
 /*Menu, expands and reveals content on hover*/
 #navbar {
-  background-color: #303a28;
+  background-color: #222222;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -59,7 +59,7 @@ body {
 }
 
 .menu-items:hover{
-  background-color: #262d1f;
+  background-color: #AC3931;;
 }
 
 /*icon*/
@@ -76,20 +76,40 @@ body {
 /*cover image and text*/
 .container {
   text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
-.container img{
-  min-width: 100%;
-  height: 640px;
+.container #omberg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
-.container h1, #changing{
-  font-size: 60px;
-  color: #273e63;
-  text-shadow: #0b0b0b 2px 5px;
-  text-transform: uppercase;
-  word-spacing: 10px;
+.container #fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  object-fit: cover; /* Ensures the fog image covers the container */
+  opacity: 0.4; /* Set the desired opacity for the fog image */
+}
+
+.container h1, #changing {
+  font-size: 200px;
+  color: #AC3931;
+  text-shadow: #222222 2px 10px;
+  word-spacing: 5px;
+  text-transform: capitalize;
   letter-spacing: 5px;
+  display: block;
+  min-width: 100%;
+  line-height: 1.2;
 }
 
 .centered {
@@ -97,32 +117,70 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
+/*sec1*/
+
+.sec1{
+  position: relative;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.sec1 img{
+  display: block;
+  width: 100%;
+  height: auto
+}
+
+.sec1 h1 {
+  font-size: 100px;
+  color: #AC3931;
+  text-shadow: #222222 2px 5px;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  display: block;
+  min-width: 100%;
+  line-height: 1.2;
+}
+
+.transbox{
+  margin: 30px;
+  background-color: rgba(34, 34, 34, 0.6);
+  padding: 30px 100px 30px 100px;
+  border-radius: 20px;
+}
+
+
+
 
 h1{
   text-align: center;
   padding: 30px;
   font-size: 30px;
-  text-transform: uppercase;
   word-spacing: 10px;
   letter-spacing: 3px;
+  font-family: 'AnglicanText', sans-serif;
 }
 
-.sec1, .sec2 {
+.sec2 {
   background-color: #172518;
   margin-bottom: 200px;
-  margin-top: 50px;
+  margin-top: 100px;
   padding-left: 50px;
   padding-right: 50px;
 }
 
 /*countdown*/
+
 .countdown {
   color: #333;
   padding: 10px;
   text-align: center;
   border-radius: 20px;
-  background-color: #303a28;
+  background-color: rgba(0, 0, 0, 0.4);
   width: 450px;
   margin-top: 30px;
 }
