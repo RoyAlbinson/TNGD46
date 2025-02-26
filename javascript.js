@@ -1,3 +1,4 @@
+//--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~words changing on hemsida h1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--//
 const words = ["legender", "mardrömmar"];
 let index = 0;
 
@@ -5,6 +6,8 @@ setInterval(() => {
     index = (index + 1) % words.length;
     document.getElementById('changing').textContent = words[index];
 }, 2500); // Changes every 2 seconds
+
+//--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~gallery buttons next/back~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--//
 
 function setupButtons(){
     // Initialize elements
@@ -14,16 +17,16 @@ function setupButtons(){
   
     // Checks if the elements exist on the current page
     if(scrollContainer && nextBtn && backBtn){
-      
-      // Lets user scroll gallery instead of using buttons
-      scrollContainer.addEventListener("wheel", (evt) => {
-        evt.preventDefault(); // Prevent default scrolling behavior
-        console.log("Whoah we scrollin!");
-        scrollContainer.scrollBy({
-          left: evt.deltaY, // Use deltaY for horizontal scrolling
-          behavior: "auto" // Disable smooth scrolling for wheel events
-        });
-      });
+    
+                //   // Lets user scroll gallery instead of using buttons
+                //   scrollContainer.addEventListener("wheel", (evt) => {
+                //     evt.preventDefault(); // Prevent default scrolling behavior
+                //     console.log("Whoah we scrollin!");
+                //     scrollContainer.scrollBy({
+                //       left: evt.deltaY, // Use deltaY for horizontal scrolling
+                //       behavior: "auto" // Disable smooth scrolling for wheel events
+                //     });
+                //   });
     
       nextBtn.addEventListener("click", ()=> {
         console.log("Next button clicked");
@@ -38,6 +41,8 @@ function setupButtons(){
       });
     }
   }
+
+//--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~countdown~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--//
 
   (function () {
     const second = 1000,
@@ -67,6 +72,8 @@ function setupButtons(){
          
         }, 1000); // Update every second
     }());
+
+//--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~java maintenance~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--//
 
 // DOMContentLoaded: Executes when HTML document has been completely loaded
 // Need this to make sure that our JS code runs AFTER the elements (buttons, forms, etc)
