@@ -101,14 +101,13 @@ body {
 }
 
 .container h1, #changing {
-  font-size: 200px;
+  font-size: 120px;
   color: #AC3931;
   text-shadow: #222222 2px 10px;
-  word-spacing: 5px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 5px;
   display: block;
-  min-width: 100%;
+  width: max-content;
   line-height: 1.2;
 }
 
@@ -162,7 +161,7 @@ h1{
   font-size: 30px;
   word-spacing: 10px;
   letter-spacing: 3px;
-  font-family: 'AnglicanText', sans-serif;
+  font-family: "Metamorphous", serif;
 }
 
 .sec2 {

@@ -1,4 +1,4 @@
-const words = ["legends", "nightmares"];
+const words = ["legender", "mardrömmar"];
 let index = 0;
 
 setInterval(() => {
@@ -46,7 +46,7 @@ function setupButtons(){
           day = hour * 24;
   
     
-    const countDown = new Date('june 25, 2025 11:00:00').getTime(),
+    const countDown = new Date('june 21, 2025 11:00:00').getTime(),
         x = setInterval(function() {    
   
           const now = new Date().getTime(),
