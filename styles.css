@@ -295,6 +295,7 @@ li {
 
 
 /*~~~~~~~~~~~~~description_section~~~~~~~~~~~~~~~~*/
+
 .short_description{
   z-index: 10;
   width: 100vw;
@@ -555,7 +556,7 @@ input[type="email"] {
   position: relative;
 }
 
-#light{
+.light{
   box-shadow: 0 8px 40px rgba(255, 255, 255, 0.5);
 }
 
@@ -569,7 +570,9 @@ input[type="email"] {
   display: flex;
 }
 .cover_section_short img{
-  top: -250px; /*moves picture up for better framing*/
+  top: -550px; /*moves picture up for better framing*/
+  width: 100vw;
+  height: auto;
 }
 
 /*~~~~~~~~~~~~~~navigation~~~~~~~~~~~~~~~~*/
