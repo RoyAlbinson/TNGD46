@@ -73,11 +73,32 @@ function setupButtons(){
         }, 1000); // Update every second
     }());
 
+    function setupForm(){
+      // Initialize element
+      const form = document.getElementById("email_form");
+      
+      // Checks if the form element exist on the current page
+      if(form){
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevents page reload
+    
+          // Collect form data
+          const userData = {
+              email: document.getElementById("email").value
+          };
+    
+          console.log(userData);                // Console msg
+          alert("Tack för ditt köp!");  // Confirmation alert
+          form.reset();                         // Clear the form fields
+        });
+      }
+    }
 //--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~java maintenance~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--//
 
 // DOMContentLoaded: Executes when HTML document has been completely loaded
 // Need this to make sure that our JS code runs AFTER the elements (buttons, forms, etc)
 // has loaded, otherwise error will occur cause they don't exist yet.
   document.addEventListener("DOMContentLoaded", function () {
+    setupForm();
     setupButtons();
   });

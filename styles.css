@@ -9,179 +9,269 @@
   margin: auto;
   color: #ffffff;
 }
+body {
+  background-color: #222222;
+}
 
-/*Fonts*/
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @font-face { font-family: 'solid 900'; src: url('fonts/fontawesome/webfonts/fa-solid-900.woff2'); }
 @font-face { font-family: 'brands 400'; src: url('fonts/fontawesome/webfonts/fa-brands-400.woff2'); }
 @font-face { font-family: 'regular 400'; src: url('fonts/fontawesome/webfonts/fa-regular-400.woff2'); }
 @font-face { font-family: 'v4compatibility'; src: url('fonts/fontawesome/webfonts/fa-v4compatibility.woff2'); }
 
-body {
-  background-color: #222222;
-}
-
-/*Menu, expands and reveals content on hover*/
-#navbar {
-  background-color: #222222;
-  overflow-y: auto;
-  overflow-x: hidden;
-  display: flex;
-  height: 8vh;
-  transition: height 0.3s ease;
-  width: 100vw;
-  position: fixed; /* Keeps it fixed at the top */
-  top: 0; /* Align to the top */
-  left: 0;
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays above other content */
-}
-
-.menu-items {
-  gap: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 6vh 0 6vh 0;
-  width: 20%;
-  color: rgb(189, 187, 187);
-  text-decoration: none;
-  font-size: 25px;
-  text-align: center;
-  float: left;
-}
-
-#navbar:hover {
-  height: 15vh;
-}
-
-#navbar:hover .menu-items {
-  opacity: 1;
-  visibility: visible; /* Reveal on hover */
-}
-
-.menu-items:hover{
-  background-color: #AC3931;;
-}
-
-/*icon*/
-.fa-caret-down {
-  font-size: 20px;
-  padding-left: 20px;
-}
-
-#navbar:hover .fa-caret-down{
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/*cover image and text*/
-.container {
-  text-align: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.container #omberg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover; /* Ensures the image covers the container without distortion */
-}
-
-.container #fog {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  object-fit: cover; /* Ensures the fog image covers the container */
-  opacity: 0.4; /* Set the desired opacity for the fog image */
-}
-
-.container h1, #changing {
-  font-size: 120px;
-  color: #AC3931;
-  text-shadow: #222222 2px 10px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  display: block;
-  width: max-content;
-  line-height: 1.2;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-/*sec1*/
-
-.sec1{
-  position: relative;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
-.sec1 img{
-  display: block;
-  width: 100%;
-  height: auto
-}
-
-.sec1 h1 {
-  font-size: 100px;
-  color: #AC3931;
-  text-shadow: #222222 2px 5px;
-  word-spacing: 5px;
-  text-transform: capitalize;
-  letter-spacing: 5px;
-  display: block;
-  min-width: 100%;
-  line-height: 1.2;
-}
-
-.transbox{
-  margin: 30px;
-  background-color: rgba(34, 34, 34, 0.6);
-  padding: 30px 100px 30px 100px;
-  border-radius: 20px;
-}
 
 
-
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common text and headings~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 h1{
   text-align: center;
-  padding: 30px;
-  font-size: 30px;
+  font-size: 80px;
   word-spacing: 10px;
   letter-spacing: 3px;
   font-family: "Metamorphous", serif;
+  text-transform: uppercase;
+  text-shadow: #222222 2px 5px;
+  padding-top: 100px;
 }
 
-.sec2 {
-  background-color: #172518;
-  margin-bottom: 200px;
-  margin-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+h2{
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Metamorphous", serif;
+  text-transform: uppercase;
 }
 
-/*countdown*/
+h3{
+  font-family: "baskervville", serif;
+  font-size: 25px;
+  padding: 20px;
+  color: #AC3931;
+}
 
-.countdown {
+h4{
+  font-family: "baskervville", serif;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+p{
+  font-size: 20px;
+  font-family: "baskervville", serif;
+}
+
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Menu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#navbar {
+  z-index: 100; /* ensures it stays above other content */
+  position: fixed; /* keeps it fixed at the top on scroll through the page */
+  display: flex;
+  width: 100vw;
+  height: 8vh;
+  top: 30px; /* pushed away from the top */
+  transition: height 0.3s ease; /* reveals on hover */
+}
+
+#navbar:hover {
+  background: radial-gradient(transparent 80%, black),
+  rgba(0, 0, 0, 0.7); /* Top gradient layer */
+  border-bottom: 2px solid #AC3931;
+  border-top: 2px solid #AC3931;
+  height: 10vh; /* expanding on hover */
+}
+
+/*~~~~~~~~~~~~~menu alternatives~~~~~~~~~~~~~~~*/
+.menu-items {
+  width: 20%;
+  gap: 20px;
+  opacity: 0; /* invisible, reveal on hover */
+  transition: opacity 0.3s ease, font-size 0.4s ease;
+  float: left;
+  scale: 1;
+  color: #AC3931;
+  font-family: "Metamorphous", serif;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#navbar:hover .menu-items {
+  opacity: 1; /* reveal on hover */
+}
+
+.menu-items:hover {
+  font-size: 25px; /* text bigger on hover */
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~icon~~~~~~~~~~~~~~~~~~~~~*/
+.fa-caret-down { /* to mark where to access menu */
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 15px;
+  color: #AC3931;
+  font-size: 30px;
+}
+
+#navbar:hover .fa-caret-down{
+  opacity: 0; /* disappears on hover */
+  transition: opacity 0.3s ease;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Cover image and text~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.cover_section {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: relative;
+  text-align: center;
+}
+
+.cover_image {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  filter: grayscale(100%);
+}
+
+#vignette{
+  background: radial-gradient(transparent 50%, black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 2;
+  margin: 0;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~home_page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#sticky{
+  position: sticky;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  text-align: center;
+}
+
+#main_heading, #changing {
+  color: #AC3931;
+  font-size: 100px;
+  text-shadow: #222222 2px 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.4;
+  text-align: center;
+  padding: 100px;
+}
+
+.centered { /* places text in the center on top of the cover image */
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/*~~~~~~~~~fog_section~~~~~~~~~~~~~~~~~*/
+.fog_section{
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.fog_section img{
+  filter: grayscale(100%); 
+}
+
+
+#fog_cloud {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 100px; /*Adjust this value to control how much it sticks out */
+  overflow: visible;
+}
+
+#small_fog_cloud1 {
+  height: 100px;
+  width: auto;
+  right: 30vw;
+  top: -35vh;
+  position: relative;
+  z-index: 3;
+}
+
+#small_fog_cloud2{
+  height: 100px;
+  width: auto;
+  right: -30vw;
+  top: -35vh;
+  position: relative;
+  z-index: 3;
+}
+
+.flipped{
+  transform: scaleX(-1);
+}
+
+.fog_section h1 {
+  font-size: 100px;
+  color: #AC3931;
+  text-shadow: #222222 2px 5px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  padding-top: 0;
+}
+
+.year h2{
+  color: #AC3931;
+  font-family: "baskervville", serif;
+  text-transform: capitalize;
+  border-style: solid;
+  padding:10px;
+  border-bottom: 2px solid #AC3931;
+  border-top: 2px solid #AC3931;
+  background-color: rgba(34, 34, 34, 0.8);
+  }
+
+
+  
+/*Countdown*/
+.box {
+  z-index: 100;
   color: #333;
   padding: 10px;
   text-align: center;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.4);
-  width: 450px;
-  margin-top: 30px;
+  width: fit-content;
+  height: 20%;
+  margin-top: 20px;
+  box-shadow: 0 7px 30px rgb(0 0 0 / 0.5);
+}
+
+.box_content{
+  padding: 20px 50px 20px 50px;
 }
 
 #countdown_headline{
@@ -191,18 +281,42 @@ h1{
 li span {
   display: block;
   font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
 }
 
 li {
   display: inline-block;
   font-size: 15px;
   list-style-type: none;
-  padding: 10px;
   text-transform: uppercase;
 }
 
-/*sec2*/
+
+
+/*~~~~~~~~~~~~~description_section~~~~~~~~~~~~~~~~*/
+.short_description{
+  z-index: 10;
+  width: 100vw;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: radial-gradient(transparent 60%, black), /* Top gradient layer */
+  #0b0b0b; /* Solid background layer */
+}
+
+.short_text{
+  z-index: 10;
+  margin: auto;
+  background-color: rgba(34, 34, 34, 0.6);
+  width: 70vw;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
 #button_grid{
+  z-index: 10;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 500px;
@@ -211,7 +325,7 @@ li {
 
 .button {
   padding: 12px;
-  background-color: #5e6f54;
+  background-color: #AC3931;
   color: white;
   border: none;
   border-radius: 5px;
@@ -219,34 +333,44 @@ li {
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #919d8b;
+  background-color: #233d1d;
 }
 
-.sec3{
-  background-color: #000000;
+
+
+/*~~~~~~~~~~~~~~~~gallery_section~~~~~~~~~~~~~~~~*/
+.gallery_section{
+  position: relative;
+  z-index: 5;
+  width: 100vw;
+  text-align: center;
+  object-fit: cover;
+  background: radial-gradient(transparent 60%, black), /* Top gradient layer */
+  #0b0b0b; /* Solid background layer */
+  margin-top: 0;
 }
-/*img gallery*/
+
 .gallery {
   display: flex;
   overflow-x: auto; 
   scroll-snap-type: x mandatory; 
-  background-color: #000000;
   overflow: hidden;
+  padding: 100px;
 }
+
 .gallery-wrap {
   display: flex;
   align-items: center;
-  margin: 80px;
 }
 
 .gallery div {
   display: grid;
   grid-template-columns: auto;
   flex: none;
-  
 }
 
 .gallery img {
@@ -254,7 +378,7 @@ button:hover {
   filter: grayscale(100%); /* Apply grayscale filter */
   transition: transform 0.5s; 
   scroll-snap-align: center;
-  padding: 0 150px 0 150px;
+  padding: 0 250px 0 250px;
 }
 
 .gallery img:hover {
@@ -272,12 +396,285 @@ button:hover {
   margin: 40px;
 }
 
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 footer {
   display: flex;
-  background-color: #303a28;
-  padding: 30px;
-  border-color: #1e211b;
-  border-width: 2px;
-  border-style: solid;
-  font-size: 25px;
+  height: 15vh;
+  width: 100%;
+  z-index: 4;
+  position: relative;
+  background: radial-gradient(transparent 60%, black), /* Top gradient layer */
+  #0b0b0b; /* Solid background layer */
+  border-bottom: 2px solid #AC3931;
+  border-top: 2px solid #AC3931;
 }
+
+footer a{
+  font-size: 25px;
+  transition: font-size 0.4s ease;
+}
+footer a:hover {
+  font-size: 40px; /* text bigger on hover */
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Tickets~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.tickets {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.tickets h1{
+  padding-bottom: 20px;
+}
+
+
+/*~~~~~~~~~~~~~~time and number of tickets selectors~~~~~~~~~~~~~~~~*/
+select {
+  padding: 10px;
+  margin-top: 20px;
+  width: 40%;
+  border-radius: 10px;
+  border: 2px solid #AC3931;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  color: white;
+  width: 10%;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #AC3931;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+
+/*~~~~~~~~~~~~~~email form~~~~~~~~~~~~~~~~*/
+.fa-square-envelope{
+  padding-right: 20px;
+}
+
+#email_form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 2px solid #AC3931;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#invoiceMessage { /* msg appears on hover over the "Skriv din epost" */ 
+  font-size: 16px;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.7);
+  border-radius: 5px;
+  text-align: center;
+  margin: 0;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+#hover_text:hover + #invoiceMessage {
+  opacity: 1; 
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Om oss~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.omoss_grid{
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Makes the text column twice as wide */
+  gap: 20px; /* Adds some space between the columns */
+  align-items: center; /* Centers content vertically */
+  height: fit-content;
+  position: relative;
+  margin: 20px;
+}
+.omoss_grid h1{
+  padding: 0;
+  margin-bottom: 40px;
+}
+.omoss_bilder img {
+  max-width: 100%; 
+  object-fit: cover;
+  height: auto;
+  display: block; /* Prevents extra space under images */
+}
+
+.omoss_text {
+  padding: 0px 20px 50px 20px;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Recension~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.quote{
+  font-style: italic;
+}
+
+.cover_section p{
+  padding: 20px;
+  line-height: 25px;
+}
+
+#recension_heading{
+  top: -50px;
+  position: relative;
+}
+
+#light{
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.5);
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Program_page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.cover_section_short{
+  z-index: 1;
+  position: relative;
+  height: 60vh;
+  display: flex;
+}
+.cover_section_short img{
+  top: -250px; /*moves picture up for better framing*/
+}
+
+/*~~~~~~~~~~~~~~navigation~~~~~~~~~~~~~~~~*/
+.page_navigation{
+  height: 20vh;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  background: radial-gradient(transparent 10%, black), /* Top gradient layer */
+  #222222; /* Solid background layer */
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 50px;
+
+}
+.page_navigation .button{
+  display: block;
+  width: 200px;
+}
+
+/*~~~~~~~~~~~~~~schedule_table~~~~~~~~~~~~~~~~*/
+.megadiv{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: starts;
+  justify-items: center;
+  z-index: 3;
+  background: radial-gradient(transparent 10%, black), /* Top gradient layer */
+  #222222; /* Solid background layer */
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.runesL, .runesR {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.runesL img, .runesR img {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+}
+
+.table_schedule{
+  position: relative;
+  z-index: 2;
+  width: 70vw;
+  height: fit-content;
+  text-align: center;
+}
+table{
+  height: auto;
+  width: 70vw;
+
+}
+
+table, th, td{
+  border: floralwhite 2px solid;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th{
+  padding: 20px;
+  vertical-align: middle;
+}
+
+td{
+  padding-top: 100px;
+}
+
+/*~~~~~~~~~~~~~~program~~~~~~~~~~~~~~~~*/
+.program{
+  padding: 100px;
+  background: radial-gradient(transparent 10%, black);
+}
+.program ul{
+  width: 70vw;
+}
+.program li{
+  padding-top: 50px;
+  text-transform: none;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Extras~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* .vignette {
+  display: inline-block;
+  position: relative;
+}
+
+.vignette img {
+  display: block;
+  border: 1px solid #fff;
+}
+
+.vignette:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: inset 10px 24px 40px 10px rgb(0, 0, 0), 
+    inset -10px -24px 40px 0px rgb(0, 0, 0), 
+    inset 20px -10px 40px 0px rgb(0, 0, 0), 
+    inset -20px 10px 40px 0px rgb(0, 0, 0);
+} */
+
+
+

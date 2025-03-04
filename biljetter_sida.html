@@ -12,55 +12,76 @@
     <link href="https://fonts.cdnfonts.com/css/anglicantext" rel="stylesheet">
     <script src="javascript.js"></script>
   </head>
+  <body>
 
-<header>
-    <nav id="navbar">
-      <i class="fa-solid fa-caret-down"></i>
-      <a href="hem_sida.html" class="menu-items">Hem</a>
-      <a href="program_sida.html" class="menu-items">Program</a>
-      <a href="recension_sida.html" class="menu-items">Recension</a>
-      <a href="omoss_sida.html" class="menu-items">Om Oss</a>
-      <a href="biljetter_sida.html" class="menu-items">Biljetter</a>
-    </nav>
-</header>
 
-<h1>Filmnamn</h1>
 
-<h2>Köp biljetter</h2>
-<label for="Tickets">Visning:</label>
-<select name="Tickets" id="Tickets">
-    <option value="12">12:00</option>
-  <option value="12">15:00</option>
-  <option value="14">18:00</option>
-  <option value="16">21:00</option>
-</select>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Menu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <header>
+      <nav id="navbar">
+        <i class="fa-solid fa-caret-down"></i>
+        <a href="hem_sida.html" class="menu-items">Hem</a>
+        <a href="program_sida.html" class="menu-items">Program</a>
+        <a href="recension_sida.html" class="menu-items">Recension</a>
+        <a href="omoss_sida.html" class="menu-items">Om Oss</a>
+        <a href="biljetter_sida.html" class="menu-items">Biljetter</a>
+      </nav>
+    </header>
 
-<div class="Tickets">
 
-<label for="Tickets">Välj antal:</label>
-<select name="Tickets" id="Tickets">
-    <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-</select>
 
-</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="tickets">
 
-<form action="/action_page.php">
-  <label for="email">Skriv din epost:</label>
-  <input type="mail" id="email" name="email">
-  <input type="submit">
-</form>
+  <h1>Drottning Omma</h1>
 
-<h3>Tack för ditt köp!</h3>
+    <h2>Köp biljetter</h2>
+    <label>Visning:</label>
+    <select name="tid" id="tid">
+      <option value="Välj tid" disabled selected>Välj tid</option>
+      <option value="12">12:00</option>
+      <option value="15">15:00</option>
+      <option value="14">18:00</option>
+      <option value="21">21:00</option>
+    </select>
+<br>
+      <label>Antal:</label>
+      <select name="ticket_count" id="ticket_count" >
+        <option value="antal" disabled selected>Välj antal</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
 
-</head>
-<body>
+    <!-- <form action="/action_page.php"> -->
+    <form id="email_form">
+      <h2>Kontaktuppgifter</h2>
+      <p id="hover_text"><i class="fa-solid fa-square-envelope"></i>Skriv din epost</p>
+      <!-- This will show on hover over the email text -->
+      <p id="invoiceMessage">Vi kommer skicka en faktura till din e-post som du måste betala för att slutföra köpet <i class="fa-solid fa-face-smile"></i></p>
+      
+      <input type="email" id="email" name="email" required placeholder="namenameson@domain.com">
+      <button type="submit" class="button">Köp biljetter</button>    
+    </form>
+
+</section>
+<div id="vignette"></div>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <footer>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+    </footer>
+
+  </body>
 </html>
