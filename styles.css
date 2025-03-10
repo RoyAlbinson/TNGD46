@@ -570,7 +570,7 @@ input[type="email"] {
   display: flex;
 }
 .cover_section_short img{
-  top: -550px; /*moves picture up for better framing*/
+  top: -80vh; /*moves picture up for better framing*/
   width: 100vw;
   height: auto;
 }
