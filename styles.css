@@ -164,18 +164,17 @@ p{
   width: 100vw;
   height: 100vh;
   top: 0;
-  text-align: center;
+
 }
 
 #main_heading, #changing {
   color: #AC3931;
-  font-size: 100px;
+  font-size: 110px;
   text-shadow: #222222 2px 10px;
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 1.4;
-  text-align: center;
-  padding: 100px;
+  margin: 70px;
 }
 
 .centered { /* places text in the center on top of the cover image */
