@@ -164,7 +164,7 @@ p{
   width: 100vw;
   height: 100vh;
   top: 0;
-
+  text-align: center;
 }
 
 #main_heading, #changing {
@@ -174,7 +174,7 @@ p{
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 1.4;
-  margin: 70px;
+  width: 85%;
 }
 
 .centered { /* places text in the center on top of the cover image */
