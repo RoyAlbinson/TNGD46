@@ -10,7 +10,7 @@
   color: #ffffff;
 }
 body {
-  background-color: #222222;
+  background-color: #3a3b37;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -70,8 +70,7 @@ p{
 }
 
 #navbar:hover {
-  background: radial-gradient(transparent 80%, black),
-  rgba(0, 0, 0, 0.7);
+  background: radial-gradient(transparent 80%, black),rgba(0, 0, 0, 0.7);
   border-bottom: 0.2vw solid #AC3931;
   border-top: 0.2vw solid #AC3931;
   height: 10vh;
@@ -403,7 +402,9 @@ footer a:hover {
 
 .tickets h1{
   padding-bottom: 2vh;
-  font-family: metamo;
+  text-transform: none;
+  font-family: "Metamorphous", serif;
+  margin-top: 10vh;
 }
 
 /*~~~~~~~~~~~~~~time and number of tickets selectors~~~~~~~~~~~~~~~~*/
@@ -439,15 +440,11 @@ label {
   padding-right: 2vw;
 }
 
-.tickets h1{
-  margin-top: 10vh;
-}
-
 #email_form {
   width: 50%;
   display: flex;
   flex-direction: column;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 1vh;
   border-radius: 1vw;
   align-items: center;
@@ -567,7 +564,6 @@ input[type="email"] {
 .megadiv{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  align-items: starts;
   justify-items: center;
   z-index: 3;
   background: radial-gradient(transparent 10%, black),
@@ -628,38 +624,4 @@ td{
 .program li{
   padding-top: 5vh;
   text-transform: none;
-}
-
-/* Media Queries for extreme screen sizes */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 8vw;
-  }
-  
-  h2 {
-    font-size: 4vw;
-  }
-  
-  p, .menu-items, .button {
-    font-size: 3vw;
-  }
-  
-  .gallery img {
-    width: 80vw;
-    padding: 0 5vw;
-  }
-}
-
-@media (min-width: 1600px) {
-  h1 {
-    font-size: 80px;
-  }
-  
-  h2 {
-    font-size: 30px;
-  }
-  
-  p {
-    font-size: 20px;
-  }
 }
