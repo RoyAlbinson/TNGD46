@@ -31,13 +31,13 @@ function setupButtons(){
       nextBtn.addEventListener("click", ()=> {
         console.log("Next button clicked");
         scrollContainer.style.scrollBehavior = "smooth";
-        scrollContainer.scrollLeft += 900;
+        scrollContainer.scrollLeft += scrollContainer.clientWidth;
       });
     
       backBtn.addEventListener("click", ()=> {
         console.log("Next button clicked");
         scrollContainer.style.scrollBehavior = "smooth";
-        scrollContainer.scrollLeft -= 900;
+        scrollContainer.scrollLeft -= scrollContainer.clientWidth;
       });
     }
   }
