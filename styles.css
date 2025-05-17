@@ -13,31 +13,27 @@ body {
   background-color: #222222;
 }
 
-
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Fonts~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @font-face { font-family: 'solid 900'; src: url('fonts/fontawesome/webfonts/fa-solid-900.woff2'); }
 @font-face { font-family: 'brands 400'; src: url('fonts/fontawesome/webfonts/fa-brands-400.woff2'); }
 @font-face { font-family: 'regular 400'; src: url('fonts/fontawesome/webfonts/fa-regular-400.woff2'); }
 @font-face { font-family: 'v4compatibility'; src: url('fonts/fontawesome/webfonts/fa-v4compatibility.woff2'); }
 
-
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common text and headings~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 h1{
   text-align: center;
-  font-size: 80px;
-  word-spacing: 10px;
-  letter-spacing: 3px;
+  font-size: 5vw;
+  word-spacing: 0.5vw;
+  letter-spacing: 0.2vw;
   font-family: "Metamorphous", serif;
   text-transform: uppercase;
-  text-shadow: #222222 2px 5px;
-  padding-top: 100px;
+  text-shadow: #222222 0.2vw 0.5vw;
+  padding-top: 10vh;
 }
 
 h2{
-  font-size: 30px;
-  padding: 10px;
+  font-size: 2vw;
+  padding: 1vh;
   text-align: center;
   font-family: "Metamorphous", serif;
   text-transform: uppercase;
@@ -45,85 +41,79 @@ h2{
 
 h3{
   font-family: "baskervville", serif;
-  font-size: 25px;
-  padding: 20px;
+  font-size: 1.8vw;
+  padding: 2vh;
   color: #AC3931;
 }
 
 h4{
   font-family: "baskervville", serif;
-  padding-bottom: 10px;
-  font-size: 20px;
+  padding-bottom: 1vh;
+  font-size: 1.5vw;
   font-style: italic;
 }
 
 p{
-  font-size: 20px;
+  font-size: 1.5vw;
   font-family: "baskervville", serif;
 }
 
-
-
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Menu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #navbar {
-  z-index: 100; /* ensures it stays above other content */
-  position: fixed; /* keeps it fixed at the top on scroll through the page */
+  z-index: 100;
+  position: fixed;
   display: flex;
   width: 100vw;
   height: 8vh;
-  top: 30px; /* pushed away from the top */
-  transition: height 0.3s ease; /* reveals on hover */
+  top: 3vh;
+  transition: height 0.3s ease;
 }
 
 #navbar:hover {
   background: radial-gradient(transparent 80%, black),
-  rgba(0, 0, 0, 0.7); /* Top gradient layer */
-  border-bottom: 2px solid #AC3931;
-  border-top: 2px solid #AC3931;
-  height: 10vh; /* expanding on hover */
+  rgba(0, 0, 0, 0.7);
+  border-bottom: 0.2vw solid #AC3931;
+  border-top: 0.2vw solid #AC3931;
+  height: 10vh;
 }
 
 /*~~~~~~~~~~~~~menu alternatives~~~~~~~~~~~~~~~*/
 .menu-items {
   width: 20%;
-  gap: 20px;
-  opacity: 0; /* invisible, reveal on hover */
+  gap: 1vw;
+  opacity: 0;
   transition: opacity 0.3s ease, font-size 0.4s ease;
   float: left;
   scale: 1;
   color: #AC3931;
   font-family: "Metamorphous", serif;
-  font-size: 20px;
+  font-size: 1.2vw;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 #navbar:hover .menu-items {
-  opacity: 1; /* reveal on hover */
+  opacity: 1;
 }
 
 .menu-items:hover {
-  font-size: 25px; /* text bigger on hover */
+  font-size: 1.5vw;
 }
 
-
 /*~~~~~~~~~~~~~~~~~~~~~icon~~~~~~~~~~~~~~~~~~~~~*/
-.fa-caret-down { /* to mark where to access menu */
+.fa-caret-down {
   position: absolute;
-  padding-left: 30px;
-  padding-top: 15px;
+  padding-left: 1.5vw;
+  padding-top: 1.5vh;
   color: #AC3931;
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 #navbar:hover .fa-caret-down{
-  opacity: 0; /* disappears on hover */
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Cover image and text~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .cover_section {
@@ -155,8 +145,6 @@ p{
   margin: 0;
 }
 
-
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~home_page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #sticky{
   position: sticky;
@@ -169,23 +157,21 @@ p{
 
 #main_heading, #changing {
   color: #AC3931;
-  font-size: 110px;
-  text-shadow: #222222 2px 10px;
+  font-size: 7vw;
+  text-shadow: #222222 0.2vw 1vw;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 0.3vw;
   line-height: 1.4;
   width: 85%;
 }
 
-.centered { /* places text in the center on top of the cover image */
+.centered {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
 
 /*~~~~~~~~~fog_section~~~~~~~~~~~~~~~~~*/
 .fog_section{
@@ -194,22 +180,18 @@ p{
   height: 100vh;
   width: 100vw;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 10vh;
 }
 
 .fog_section img{
-  filter: grayscale(100%) brightness(0.55) contrast(300%) blur(5px);
+  filter: grayscale(100%) brightness(0.55) contrast(300%) blur(0.5vw);
 }
 
-.fog_section h1 {
-  font-size: 100px;
-  color: #AC3931;
-  text-shadow: #222222 2px 5px;
-  text-transform: capitalize;
-  margin-bottom: 10px;
-  padding: 0;
+#title {
+  filter: grayscale(100%) brightness(1) contrast(300%) blur(0px);
+  height: 50vh;
   position: relative;
-  top: -100px;
+  top: -1vh;
 }
 
 #fog_cloud {
@@ -217,12 +199,12 @@ p{
   width: 100%;
   top: 0;
   left: 0;
-  bottom: 100px; /*Adjust this value to control how much it sticks out */
+  bottom: 10vh;
   overflow: visible;
 }
 
 #small_fog_cloud1 {
-  height: 100px;
+  height: 10vh;
   width: auto;
   right: 30vw;
   top: -35vh;
@@ -231,7 +213,7 @@ p{
 }
 
 #small_fog_cloud2{
-  height: 100px;
+  height: 10vh;
   width: auto;
   right: -30vw;
   top: -35vh;
@@ -248,61 +230,57 @@ p{
   font-family: "baskervville", serif;
   text-transform: capitalize;
   border-style: solid;
-  padding:10px;
-  border-bottom: 2px solid #AC3931;
-  border-top: 2px solid #AC3931;
+  padding:1vh;
+  border-bottom: 0.2vw solid #AC3931;
+  border-top: 0.2vw solid #AC3931;
   background-color: rgba(34, 34, 34, 0.8);
-  margin: 0;
 }
   
 /*Countdown*/
 .box {
   z-index: 100;
   color: #333;
-  padding: 10px;
+  padding: 1vh;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 2vw;
   background-color: rgba(0, 0, 0, 0.4);
   width: fit-content;
   height: 20%;
-  margin-top: 20px;
-  box-shadow: 0 7px 30px rgb(0 0 0 / 0.5);
+  margin-bottom: 10vh;
+  box-shadow: 0 0.7vw 3vw rgb(0 0 0 / 0.5);
 }
 
 .box_content{
-  padding: 20px 50px 20px 50px;
+  padding: 2vh 3vw 2vh 3vw;
 }
 
 #countdown_headline{
-  padding: 10px;
+  padding: 1vh;
 }
 
 li span {
   display: block;
-  font-size: 40px;
+  font-size: 3vw;
   font-family: 'Times New Roman', Times, serif;
-  padding: 20px;
+  padding: 2vh;
 }
 
 li {
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.2vw;
   list-style-type: none;
   text-transform: uppercase;
 }
 
-
-
 /*~~~~~~~~~~~~~description_section~~~~~~~~~~~~~~~~*/
-
 .short_description{
   z-index: 10;
   width: 100vw;
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background: radial-gradient(transparent 60%, black), /* Top gradient layer */
-  #0b0b0b; /* Solid background layer */
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background: radial-gradient(transparent 60%, black),
+  #0b0b0b;
 }
 
 .short_text{
@@ -310,8 +288,8 @@ li {
   margin: auto;
   background-color: rgba(34, 34, 34, 0.6);
   width: 70vw;
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 2vw;
+  padding: 2vh;
   text-align: center;
 }
 
@@ -319,28 +297,26 @@ li {
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 500px;
-  margin-top: 40px;
+  width: 30vw;
+  margin-top: 4vh;
 }
 
 .button {
-  padding: 12px;
+  padding: 1vh;
   background-color: #AC3931;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 15px;
+  border-radius: 0.5vw;
+  font-size: 1vw;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 1vh;
 }
 
 button:hover {
   background-color: #233d1d;
 }
-
-
 
 /*~~~~~~~~~~~~~~~~gallery_section~~~~~~~~~~~~~~~~*/
 .gallery_section{
@@ -349,9 +325,9 @@ button:hover {
   width: 100vw;
   text-align: center;
   object-fit: cover;
-  background: radial-gradient(transparent 60%, black), /* Top gradient layer */
-  #0b0b0b; /* Solid background layer */
+  background: radial-gradient(transparent 60%, black), #0b0b0b;
   margin-top: 0;
+
 }
 
 .gallery {
@@ -359,7 +335,7 @@ button:hover {
   overflow-x: auto; 
   scroll-snap-type: x mandatory; 
   overflow: hidden;
-  padding: 100px;
+  padding: 10vh;
 }
 
 .gallery-wrap {
@@ -374,11 +350,11 @@ button:hover {
 }
 
 .gallery img {
-  width: 600px;
-  filter: grayscale(100%); /* Apply grayscale filter */
+  width: 40vw;
+  filter: grayscale(100%);
   transition: transform 0.5s; 
   scroll-snap-align: center;
-  padding: 0 250px 0 250px;
+  padding: 0 20vw 0 20vw;
 }
 
 .gallery img:hover {
@@ -387,16 +363,14 @@ button:hover {
 }
 
 .gallery::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
+  display: none;
 }
 
 #backBtn, #nextBtn {
-  width: 50px;
+  width: 3vw;
   cursor: pointer;
-  margin: 40px;
+  margin: 3vh;
 }
-
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 footer {
@@ -405,45 +379,43 @@ footer {
   width: 100%;
   z-index: 4;
   position: relative;
-  background: radial-gradient(transparent 60%, black), /* Top gradient layer */
-  #0b0b0b; /* Solid background layer */
-  border-bottom: 2px solid #AC3931;
-  border-top: 2px solid #AC3931;
+  background: radial-gradient(transparent 60%, black),
+  #0b0b0b;
+  border-bottom: 0.2vw solid #AC3931;
+  border-top: 0.2vw solid #AC3931;
 }
 
 footer a{
-  font-size: 25px;
+  font-size: 1.8vw;
   transition: font-size 0.4s ease;
 }
 footer a:hover {
-  font-size: 40px; /* text bigger on hover */
+  font-size: 2.5vw;
 }
-
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Tickets~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .tickets {
   text-align: center;
   z-index: 10;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
 }
 
 .tickets h1{
-  padding-bottom: 20px;
+  padding-bottom: 2vh;
+  font-family: metamo;
 }
-
 
 /*~~~~~~~~~~~~~~time and number of tickets selectors~~~~~~~~~~~~~~~~*/
 select {
-  padding: 10px;
-  margin-top: 20px;
+  padding: 1vh;
+  margin-top: 2vh;
   width: 40%;
-  border-radius: 10px;
-  border: 2px solid #AC3931;
+  border-radius: 1vw;
+  border: 0.2vw solid #AC3931;
   background-color: transparent;
   color: white;
-  font-size: 15px;
+  font-size: 1vw;
   cursor: pointer;
 }
 
@@ -452,20 +424,23 @@ label {
   color: white;
   width: 10%;
   text-align: center;
-  margin: 10px;
-  padding: 10px;
+  margin: 1vh;
+  padding: 1vh;
   background-color: #AC3931;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 15px;
+  border-radius: 0.5vw;
+  font-size: 1vw;
   text-transform: uppercase;
 }
 
-
 /*~~~~~~~~~~~~~~email form~~~~~~~~~~~~~~~~*/
 .fa-square-envelope{
-  padding-right: 20px;
+  padding-right: 2vw;
+}
+
+.tickets h1{
+  margin-top: 10vh;
 }
 
 #email_form {
@@ -473,26 +448,27 @@ label {
   display: flex;
   flex-direction: column;
   background-color: #000000;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 1vh;
+  border-radius: 1vw;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 4vh;
+  margin-bottom: 10vh;
 }
 
 input[type="email"] {
-  padding: 10px;
-  margin-bottom: 5px;
-  border: 2px solid #AC3931;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 1vh;
+  margin-bottom: 0.5vh;
+  border: 0.2vw solid #AC3931;
+  border-radius: 0.5vw;
+  font-size: 1vw;
 }
 
-#invoiceMessage { /* msg appears on hover over the "Skriv din epost" */ 
-  font-size: 16px;
+#invoiceMessage {
+  font-size: 1vw;
   color: white;
   background-color: rgba(34, 34, 34, 0.7);
-  border-radius: 5px;
+  border-radius: 0.5vw;
   text-align: center;
   margin: 0;
   opacity: 0; 
@@ -503,65 +479,60 @@ input[type="email"] {
   opacity: 1; 
 }
 
-
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Om oss~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .omoss_grid{
-  padding-top: 70px;
+  padding-top: 7vh;
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Makes the text column twice as wide */
-  gap: 20px; /* Adds some space between the columns */
-  align-items: center; /* Centers content vertically */
+  grid-template-columns: 1fr 2fr;
+  gap: 2vh;
+  align-items: center;
   height: fit-content;
   position: relative;
   z-index: 3;
-  margin-top: 35px;
-  margin-left: 20px;
+  margin-top: 3.5vh;
+  margin-left: 2vw;
 }
 .omoss_grid h1{
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 4vh;
 }
 
 .omoss_bilder img {
   object-fit: cover;
-  height: 240px;
-  width: 400px;
-  display: block; /* Prevents extra space under images */
-  margin-bottom: 10px;
+  height: 25vh;
+  width: 30vw;
+  display: block;
+  margin-bottom: 4vh;
   margin-left: auto;
   margin-right: auto;
-
+  margin-top: 10vh;
 }
 
 .omoss_text {
-  padding: 0px 40px 0px 40px;
+  padding: 0 4vw 0 4vw;
 }
-
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Recension~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .quote{
   font-style: italic;
 }
 
-.cover_section p{
-  padding: 20px;
-  line-height: 25px;
+.box_content p{
+  padding: 4vh;
+  line-height: 4vh;
 }
 
 #recension_heading{
-  top: -50px;
+  top: 8vh;
   position: relative;
+  margin-bottom: 10vh;
 }
 
 .light{
-  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0.8vw 4vw rgba(255, 255, 255, 0.5);
 }
 
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Program_page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 .cover_section_short{
   z-index: 1;
   position: relative;
@@ -569,7 +540,7 @@ input[type="email"] {
   display: flex;
 }
 .cover_section_short img{
-  top: -80vh; /*moves picture up for better framing*/
+  top: -80vh;
   width: 100vw;
   height: auto;
 }
@@ -580,17 +551,16 @@ input[type="email"] {
   width: 100%;
   z-index: 2;
   position: relative;
-  background: radial-gradient(transparent 10%, black), /* Top gradient layer */
-  #222222; /* Solid background layer */
+  background: radial-gradient(transparent 10%, black),
+  #222222;
   display: flex;
   text-decoration: none;
   text-align: center;
-  padding-top: 50px;
-
+  padding-top: 5vh;
 }
 .page_navigation .button{
   display: block;
-  width: 200px;
+  width: 20vw;
 }
 
 /*~~~~~~~~~~~~~~schedule_table~~~~~~~~~~~~~~~~*/
@@ -600,21 +570,21 @@ input[type="email"] {
   align-items: starts;
   justify-items: center;
   z-index: 3;
-  background: radial-gradient(transparent 10%, black), /* Top gradient layer */
-  #222222; /* Solid background layer */
+  background: radial-gradient(transparent 10%, black),
+  #222222;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 10vh;
 }
 
 .runesL, .runesR {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1vh;
   align-items: center;
 }
 
 .runesL img, .runesR img {
-  width: 200px;
+  width: 15vw;
   height: auto;
 }
 
@@ -628,27 +598,26 @@ input[type="email"] {
 table{
   height: auto;
   width: 70vw;
-
 }
 
 table, th, td{
-  border: floralwhite 2px solid;
+  border: floralwhite 0.2vw solid;
   border-collapse: collapse;
   margin: auto;
 }
 
 th{
-  padding: 20px;
+  padding: 2vh;
   vertical-align: middle;
 }
 
 td{
-  padding-top: 100px;
+  padding-top: 10vh;
 }
 
 /*~~~~~~~~~~~~~~program~~~~~~~~~~~~~~~~*/
 .program{
-  padding: 100px;
+  padding: 10vh;
   background: radial-gradient(transparent 10%, black);
 }
 
@@ -657,6 +626,40 @@ td{
 }
 
 .program li{
-  padding-top: 50px;
+  padding-top: 5vh;
   text-transform: none;
+}
+
+/* Media Queries for extreme screen sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 8vw;
+  }
+  
+  h2 {
+    font-size: 4vw;
+  }
+  
+  p, .menu-items, .button {
+    font-size: 3vw;
+  }
+  
+  .gallery img {
+    width: 80vw;
+    padding: 0 5vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 80px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
 }
